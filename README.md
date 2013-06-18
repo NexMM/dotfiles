@@ -11,3 +11,7 @@ $ git clone https://github.com/NexMM/dotfiles.git
 $ cd dotfiles
 $ sh install.sh
 ```
+
+## License
+[MIT License](http://www.opensource.org/licenses/MIT)
+
