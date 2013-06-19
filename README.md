@@ -11,6 +11,10 @@ $ git clone https://github.com/NexMM/dotfiles.git
 $ cd dotfiles
 $ sh install.sh
 ```
+Or
+```bash
+$ curl https://raw.github.com/NexMM/dotfiles/master/curl_install.sh | sh
+```
 
 ## License
 [MIT License](http://www.opensource.org/licenses/MIT)
