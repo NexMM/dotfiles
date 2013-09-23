@@ -1,17 +1,27 @@
-execute pathogen#infect()
-
 filetype on
-filetype plugin on
+filetype plugin indent on
 
 set nocompatible
 
-set transp=6
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-set background=dark
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-colorscheme molokai
-
-set guifont=Monaco\ Regular:14
+NeoBundle 'vim-hardtime'
+NeoBundle 'nerdtree'
+NeoBundle 'zencoding-vim'
+NeoBundle 'vim-surround'
+NeoBundle 'ctrlp.vim'
+NeoBundle 'vim-ruby'
+NeoBundle 'vim-misc'
+NeoBundle 'molokai'
+NeoBundle 'https://github.com/biskark/vim-ultimate-colorscheme-utility.git'
+NeoBundle 'https://github.com/gregsexton/MatchTag'
+NeoBundle 'https://github.com/xolox/vim-shell'
+NeoBundle 'https://github.com/tpope/vim-endwise.git'
+NeoBundle 'https://github.com/uu59/vim-herokudoc-theme.git'
 
 syntax on
 
@@ -36,3 +46,21 @@ set expandtab
 set shiftwidth=2
 
 set tabstop=2
+
+set noswapfile
+
+set nobackup
+
+set nowritebackup
+
+
+"keymapping
+map <c-e> <c-y>,
+map <c-h> :nohl<CR>,
+
+augroup vimrcs
+  au!
+  au bufwritepost ~/.vimrc
+  \ source ~/.vimrc |
+  \ source ~/.gvimrc |
+augroup END

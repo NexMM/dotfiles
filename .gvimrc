@@ -1,9 +1,10 @@
 set guifont=Monaco:h14
 
-set lines=999 columns=999
+colorscheme luna
 
-set splitright
+set transparency=0
+
+set background=dark
 
 set guioptions-=r
-set guioptions-=l
 set guioptions-=L
